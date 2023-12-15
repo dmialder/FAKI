@@ -1,7 +1,6 @@
-select "branchName" from (
-	select "branchName", "fullname", count(distinct "companyId") from singlesales s 
-	where "branchName" is not null and "fullname" is not null
-	group by "branchName", "fullname"
-)
+select "branchName", round(avg(kek)) as lel from(
+	select "fullname", "branchName", count("companyId") as kek from distributor.singlesales s 
+	group by "fullname", "branchName")
 group by "branchName"
+order by lel desc 
 limit 100

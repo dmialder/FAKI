@@ -1,6 +1,7 @@
-select * from singlesales
-where "salesRub" in (
-select max("salesRub") from singlesales
-where "salesRub" is not null
+select * from singlesales s
+where "index" in (
+	select "index" from singlesales 
+	where "salesRub" in (
+		select max("salesRub") from singlesales s2 
+		limit 1)
 )
-limit 100

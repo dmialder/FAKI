@@ -1,2 +1,2 @@
-select * from singleSales
+select * from singlesales s 
 limit 100
