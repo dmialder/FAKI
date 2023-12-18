@@ -1,0 +1,13 @@
+<h2>{{ name }}</h2>
+
+{% if not year_of_death %}
+<p>Year of birth: {{ year_of_birth }}.</p>
+{% else %}
+<p>Life: {{ birth_year }}-{{ death_year }}.</p>
+{% endif %}
+<p>Countries: {{ countries }}.</p>
+
+<h3>Films</h3>
+{% for film in films %}
+<p><a href="/films/{{ film[0] }}">{{ film[1] }}</a> - {{ film[2] }}</p>
+{% endfor %}

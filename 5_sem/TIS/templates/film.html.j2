@@ -1,0 +1,9 @@
+<h2>{{ name }} ({{ year }})</h2>
+
+<p>Genres: {{ genres }}.</p>
+<p>Countries: {{ countries }}.</p>
+
+<h3>People</h3>
+{% for person in people %}
+<p><a href="/people/{{ person[0] }}">{{ person[1] }}</a> - {{ person[2] }}</p>
+{% endfor %}

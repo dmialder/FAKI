@@ -1,0 +1,5 @@
+<p>Films</p>
+
+{% for film in films %}
+<p><a href="/films/{{ film[0] }}">{{ film[1] }}</a>({{ film[2] }})</p>
+{% endfor %}

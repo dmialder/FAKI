@@ -1,0 +1,11 @@
+<h2>People</h2>
+
+{% for person in people %}
+<p>
+    {% if person[3] %}
+    <a href="/people/{{ person[0] }}">{{ person[1] }} ({{ person[2] }}-{{ person[3] }})</a>
+    {% else %}
+    <a href="/people/{{ person[0] }}">{{ person[1] }} ({{ person[2] }})</a>
+    {% endif %}
+</p>
+{% endfor %}
